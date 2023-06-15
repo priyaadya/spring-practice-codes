@@ -1,0 +1,38 @@
+package Hql;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+import com.Jsp.SecondProject.TestProject2.Student;
+
+public class hqlExample {
+public static void main(String[] args) {
+	Configuration conf=new Configuration();
+	conf.configure("hibernate.cfg.xml");
+	SessionFactory factory = conf.buildSessionFactory();
+	Session s=factory.openSession();
+	
+	
+	//Hql syntax
+	String query="from Student where Name='divya'";
+	Query q = s.createQuery(query);
+	
+	//single(unique)
+	//multiple-list
+	
+	List<Student>list=q.list();
+	for(Student stu:list)
+	{
+		System.out.println(stu.getName()+":"+stu.getMarks());
+		
+	}
+	s.close();
+	
+	factory.close();
+	
+}
+}

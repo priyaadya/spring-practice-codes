@@ -1,0 +1,5 @@
+package com.jsp.SpringJdbcCrud;
+
+public class JavaConfig {
+
+}

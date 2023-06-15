@@ -1,0 +1,37 @@
+package Jspiders.App;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+/*DAO class(data access object)*/
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	//Student st=new Student();
+    	//st.setUsn(10);
+    	//st.setName("adya");
+    	//st.setMarks(99);
+    	
+    	Emp e=new Emp();
+    	e.seteName("adya");
+    	e.seteSal(10000.00);
+    	e.setX(10);
+    	
+    	
+    	Configuration conf=new  Configuration();
+    	conf.configure("hibernate.cfg.xml");
+    	SessionFactory buildSessionFactory = conf.buildSessionFactory();
+    	Session openSession = buildSessionFactory.openSession();
+    	Transaction tx = openSession.beginTransaction();
+    	openSession.save(e);
+    	tx.commit();
+    	openSession.close();
+    	buildSessionFactory.close();
+    	
+    	
+    	
+    }
+}

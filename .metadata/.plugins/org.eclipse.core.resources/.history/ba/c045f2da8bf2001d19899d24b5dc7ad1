@@ -1,0 +1,16 @@
+package com.jsp.mod1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Project Started" );
+        ApplicationContext context=new ClassPathXmlApplicationContext("com/jsp/mod1/Config3.xml");
+       Emp1 e1 =context.getBean("emp2", Emp1.class);
+        System.out.println(e1);
+        System.out.println( "Project completed" );
+    }
+}

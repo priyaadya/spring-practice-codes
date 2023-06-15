@@ -1,0 +1,8 @@
+package com.map;
+
+public class Emp {
+	
+	private int eid;
+	private String name;
+
+}

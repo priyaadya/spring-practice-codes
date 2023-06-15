@@ -1,0 +1,81 @@
+package com.jsp.mod1;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("bean1")
+public class SpelExp {
+	
+	@Value("#{99+63}")
+	private int x;
+	
+	@Value("#{88>99?8.5:9.5}")
+	private double y;
+	
+	@Value("#{T(java.lang.Math).PI}")
+	private double staticVariable;
+	
+	@Value("#{5<3}")
+	private boolean i;
+	
+	public boolean isI() {
+		return i;
+	}
+
+	public void setI(boolean i) {
+		this.i = i;
+	}
+
+	public double getStaticVariable() {
+		return staticVariable;
+	}
+
+	public void setStaticVariable(double staticVariable) {
+		this.staticVariable = staticVariable;
+	}
+
+	@Value("#{T(java.lang.Math).cbrt(27)}")
+	private double power;
+
+	public double getPower() {
+		return power;
+	}
+
+	public void setPower(double power) {
+		this.power = power;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public void setY(double y) {
+		this.y = y;
+	}
+
+	public SpelExp() {
+		
+	}
+
+	@Override
+	public String toString() {
+		return "SpelExp [x=" + x + ", y=" + y + ", staticVariable=" + staticVariable + ", i=" + i + ", power=" + power
+				+ "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

@@ -1,0 +1,8 @@
+package com.jsp.Entity;
+
+public class Student {
+	private String usn;
+	private String name;
+	private String city;
+
+}

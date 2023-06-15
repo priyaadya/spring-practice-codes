@@ -1,0 +1,6 @@
+package com.jsp.mod1;
+
+public class Dept {
+	private String dName;
+
+}

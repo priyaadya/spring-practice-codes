@@ -1,0 +1,5 @@
+package mvcspring.controller;
+
+public class ReController {
+
+}

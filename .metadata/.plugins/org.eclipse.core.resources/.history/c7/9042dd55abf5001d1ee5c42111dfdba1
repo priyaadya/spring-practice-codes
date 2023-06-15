@@ -1,0 +1,21 @@
+package com.SpringWithoutXml;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("firstPizza")
+public class Pizza {
+	
+		@Value("Cheese and corn")
+		private String pName;
+		
+		@Value("198.36")
+		private double pPrice;
+		void deliver()
+		{
+			System.out.println("Deliver my pizza fast!! i am very hungry");
+			
+		}
+	
+
+}

@@ -1,0 +1,30 @@
+package Autowiring;
+
+public class Student {
+	
+	private Certificate certi;
+
+	public Certificate getCerti() {
+		return certi;
+	}
+
+	public void setCerti(Certificate certi) {
+		this.certi = certi;
+		System.out.println("setting the property using setter");
+	}
+
+	public Student(Certificate certi) {
+		this.certi = certi;
+		System.out.println("setting the properties using constructor");
+	}
+
+	@Override
+	public String toString() {
+		return "Student [certi=" + certi + "]";
+	}
+
+	public Student() {
+	}
+	
+
+}

@@ -1,0 +1,8 @@
+package com.Jsp.SecondProject.TestProject2;
+
+public class Certificate {
+	
+	private String course;
+	private String duration;
+
+}

@@ -1,0 +1,13 @@
+package Jspiders.App;
+
+public class EmDemo {
+
+	public static void main(String[] args) {
+		Student st=new Student();
+		st.setUsn(10);
+		st.setName("adya");
+		st.setMarks(99.99);
+
+	}
+
+}

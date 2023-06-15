@@ -1,0 +1,5 @@
+package mvcspring;
+
+public class ContactController {
+
+}

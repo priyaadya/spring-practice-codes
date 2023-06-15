@@ -1,0 +1,22 @@
+package com.mvc.ViewToCotroller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class SigUp {
+	
+	@RequestMapping("/contact")
+	public String Contact() {
+		return "SignUp";
+		
+	}
+	
+	@RequestMapping("/")
+	public String HandleFormData() {
+		return "";
+		
+	}
+	
+
+}

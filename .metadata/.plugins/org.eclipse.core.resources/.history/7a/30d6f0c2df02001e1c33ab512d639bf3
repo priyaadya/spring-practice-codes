@@ -1,0 +1,19 @@
+package mvcspring.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import mvcspring.dao.UserDao;
+import mvcspring.model.User;
+
+public class UserService {
+	
+	
+	@Autowired
+	private UserDao userDao;
+	
+	public int createUser(User user) {
+		return this.userDao.saveUser(user);
+		//it will call saveuser method of userDao
+	}
+
+}

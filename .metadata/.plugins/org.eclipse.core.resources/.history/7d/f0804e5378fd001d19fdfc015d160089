@@ -1,0 +1,27 @@
+package com.jsp.servletProject;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class MyServlet extends HttpServlet{
+	
+	
+	public void doPost(HttpServletRequest req,HttpServletResponse resp) throws IOException
+	{
+		String firstname = req.getParameter("fnm");
+		String Lastname = req.getParameter("lnm");
+		String email = req.getParameter("em");
+		
+		
+		 PrintWriter out=resp.getWriter();
+		 out.print("<html><body bgcolor='blue'><h1>" + "congrats"+" "+firstname+"</h1></body></html>");
+		 out.flush();
+		
+	}
+	
+
+}

@@ -1,0 +1,21 @@
+package com.jsp.mod1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Project Started" );
+        ApplicationContext context=new ClassPathXmlApplicationContext("com/jsp/mod1/Config1.xml");
+      //upcasting
+       Student a =(Student) context.getBean("student1");
+       Student b =(Student) context.getBean("student2");
+        //application context cerate object at run time
+       System.out.println(a);
+       System.out.println(b);
+  
+        System.out.println( "Project completed" );
+    }
+}

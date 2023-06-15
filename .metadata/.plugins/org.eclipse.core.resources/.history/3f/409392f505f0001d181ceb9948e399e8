@@ -1,0 +1,18 @@
+package com.map;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Emp {
+	
+	@Id
+	private int eid;
+	private String name;
+	
+	
+	private List<Project> project;
+
+}

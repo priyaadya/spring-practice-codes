@@ -1,0 +1,14 @@
+package com.jsp.mod1;
+
+import org.springframework.stereotype.Component;
+
+@Component("bean1")
+public class SqlExp {
+	private int x;
+	private double y;
+	
+	
+	
+	
+
+}

@@ -1,0 +1,18 @@
+package com.jsp.SpringJdbc.Dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.jsp.SpringJdbc.Entity.Student;
+
+public class StudentDaoImpl implements StudentDao {
+	
+	private JdbcTemplate dinga;
+	public int insert(Student student) {
+		
+		String inquery="insert into  springjdbc.student values(?,?,?)";
+		int result=dinga.update(inquery,student.getUsn(),student.getName(),student.getCity());
+		System.out.println("Record inserted......"+result);
+		return result;
+	}
+
+}

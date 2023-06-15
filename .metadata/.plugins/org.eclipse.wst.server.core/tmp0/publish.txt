@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Mon Jun 05 00:31:40 IST 2023
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\User\\.m2\\repository\\org\\springframework\\spring-web\\5.3.18\\spring-web-5.3.18.jar=C\:\\Users\\User\\Downloads\\apache-tomcat-9.0.75\\wtpwebapps\\SearchPageMvc\\WEB-INF\\lib\\spring-web-5.3.18.jar
+org.eclipse.jst.j2ee.server\:SearchPageMvc=C\:\\Users\\User\\Downloads\\apache-tomcat-9.0.75\\wtpwebapps\\SearchPageMvc
+org.eclipse.jst.j2ee.server\:mvcspring=C\:\\Users\\User\\Downloads\\apache-tomcat-9.0.75\\wtpwebapps\\mvcspring

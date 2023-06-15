@@ -1,0 +1,36 @@
+package com.RestApi.RestApi.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.RestApi.RestApi.entities.Book;
+import com.RestApi.RestApi.services.BookServices;
+
+@RestController
+public class BooksController {
+	
+	@Autowired
+	private BookServices bookservice;
+	
+	@GetMapping("/books")
+	public List<Book> getBooks() {
+	return this.bookservice.getAllBooks();
+	}
+	
+	//single book
+	@GetMapping("/books/{id}")
+	public Book getBook(@PathVariable("id")int id) {
+		return bookservice.getBookById(id);
+		
+	}
+	
+	
+}

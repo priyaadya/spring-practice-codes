@@ -1,0 +1,14 @@
+package com.SpringWithoutXml;
+
+
+public class PizzaConfig {
+	
+	@Bean
+	public Pizza getPizza()
+	{
+		Pizza p=new Pizza();
+		return p;
+		
+	}
+
+}

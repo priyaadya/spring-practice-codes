@@ -1,0 +1,22 @@
+package com.jsp.Test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.jsp.Entity.Student;
+
+
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+       System.out.println("Execution started");
+       ApplicationContext con=new ClassPathXmlApplicationContext("com/jsp/Test/ormconfig.xml");
+       Student bean = con.getBean("studentDao", Student.class);
+       System.out.println(bean);
+       System.out.println("--------------");
+       System.out.println("execution ended");
+       
+    }
+}

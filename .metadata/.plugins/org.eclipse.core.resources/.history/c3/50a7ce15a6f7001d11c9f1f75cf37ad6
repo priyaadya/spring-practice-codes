@@ -1,0 +1,42 @@
+package com.jsp.SpringJdbcCrud;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+import com.jsp.SpringJdbc.Dao.StudentDao;
+import com.jsp.SpringJdbc.Dao.StudentDaoImpl;
+
+@Configuration
+public class JavaConfig {
+	
+	@Bean("ds")
+	public DataSource getDataSource() {
+		DriverManagerDataSource driverManagerDataSource=new DriverManagerDataSource();//jdbc tempate wants data source
+		driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
+		driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/springjdbc");
+		driverManagerDataSource.setUsername("root");
+		driverManagerDataSource.setPassword("root");
+		return driverManagerDataSource;
+	}
+	
+	@Bean("jdbcTemplate")
+	public JdbcTemplate getJdbcTemplate() {
+		JdbcTemplate jdbcTemplate=new JdbcTemplate();
+		jdbcTemplate.setDataSource(getDataSource());//it accept jdbc template
+		return jdbcTemplate;
+		
+	}
+	
+	@Bean("studentDao")
+	public StudentDao getStudent() {
+		StudentDaoImpl st=new StudentDaoImpl();
+		st.setJdbcTemplate(null);//first student dao
+		return null;
+		
+	}
+
+}

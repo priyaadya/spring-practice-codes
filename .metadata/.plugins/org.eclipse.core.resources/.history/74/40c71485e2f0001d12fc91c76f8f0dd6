@@ -1,0 +1,47 @@
+package com.Jsp.SecondProject.TestProject2;
+
+import javax.persistence.EntityTransaction;
+import javax.transaction.Transaction;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	Configuration conf=new Configuration();
+    	conf.configure("hibernate.cfg.xml");
+    	SessionFactory factory = conf.buildSessionFactory();
+    	
+    	Student st=new Student();
+    	st.setUsn(10);
+    	st.setName("priya");
+    	st.setMarks(99.99);
+     	
+   
+    	Certificate ct=new Certificate();
+    	ct.setCourse("java");
+    	ct.setDuration("2 month");
+    	st.setCertificate(ct);
+    	
+    	//transient state
+    	
+    	
+    	
+    	Session session = factory.openSession();
+    	Transaction tx=(Transaction) session.beginTransaction()
+    	session.save(st);
+    	//Persistent state
+    	
+    	session.save(ct);
+    	factory.close();
+    
+    	
+    }
+    
+    
+    
+}

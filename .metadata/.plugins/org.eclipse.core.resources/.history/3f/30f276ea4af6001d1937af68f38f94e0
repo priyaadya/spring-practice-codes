@@ -1,0 +1,17 @@
+package com.SpringWithoutXml;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class PizzaConfig {
+	
+	@Bean
+	public Pizza getPizza()
+	{
+		Pizza p=new Pizza();
+		return p;
+		
+	}
+
+}

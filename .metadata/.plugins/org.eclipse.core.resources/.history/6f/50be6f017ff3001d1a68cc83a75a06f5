@@ -1,0 +1,16 @@
+package BeanLifeCycle;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Project Started" );
+        ApplicationContext context=new ClassPathXmlApplicationContext("BeanLifeCycle/Config4.xml");
+       Exam e=context.getBean("exam1", Exam.class);
+
+        System.out.println( "Project completed" );
+    }
+}

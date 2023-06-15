@@ -1,0 +1,25 @@
+package Hql;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+public class Question1 {
+	
+		@Id
+		@Column(name="question_id")
+		private int questionId;
+		private String question;
+		
+		@OneToMany(mappedBy = "question")
+		private List<Answer1> answer;
+
+
+		
+
+	}
+
+
+}

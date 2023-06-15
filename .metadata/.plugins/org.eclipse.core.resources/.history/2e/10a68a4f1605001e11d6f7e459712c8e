@@ -1,0 +1,33 @@
+package com.RestApi.RestApi.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.RestApi.RestApi.entities.Book;
+
+public class BookServices {
+	
+	private static List<Book> list=new ArrayList<>();
+	
+	static {
+		list.add(new Book(12,"java","abc"));
+		list.add(new Book(12,"python","xyz"));
+		list.add(new Book(12,"c","ips"));
+		
+	}
+	
+	//get all books
+	public List<Book> getAllBooks(){
+		return list;
+		
+	}
+	
+	//get single book
+	
+	public Book getBookById() {
+		list.stream().filter(e->{e.getId()==id}).findFirst().get();
+		
+		
+	}
+
+}

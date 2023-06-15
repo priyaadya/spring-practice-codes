@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<center>
+<body bgcolor="green">
+
+<!-- implementing model and view -->
+<h1>Welcome to Spring class</h1>
+<h2>I hope u are learning and enjoying it</h2>
+<%
+int id=(Integer)request.getAttribute("id");
+String name=(String)request.getAttribute("Name");
+LocalDateTime lt=(LocalDateTime)request.getAttribute("time");
+
+%>
+<h1>Id is:<%=id %></h1>
+<h1>Name is:<%=name %></h1>
+
+</body>
+</center>
+</html>

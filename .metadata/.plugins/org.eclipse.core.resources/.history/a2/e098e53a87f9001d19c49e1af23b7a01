@@ -1,0 +1,12 @@
+package com.spring.orm.Dao;
+
+import com.spring.orm.entities.Student;
+
+public class StudentDao {
+	
+	public int insert(Student student) {
+		return 1;
+		
+	}
+
+}

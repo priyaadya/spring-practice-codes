@@ -1,0 +1,26 @@
+package com.map;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class MapDemo {
+
+	public static void main(String[] args) {
+		Configuration conf=new  Configuration();
+    	conf.configure("hibernate.cfg.xml");
+    	SessionFactory factory = conf.buildSessionFactory();
+    	
+    	
+    	Question q1=new Question();
+    	q1.setQuestionId(123);
+    	q1.setQuestion("what is java?");
+    	
+    	Answer answer=new Answer();
+    	answer.setAnswerId(321);
+    	answer.setAnswer("Java is prg lang");
+    	q1.setAnswer(answer);
+    	
+
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.Jsp.SecondProject.TestProject2;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class Fetch {
+
+	public static void main(String[] args) {
+		Configuration conf=new Configuration();
+    	conf.configure("hibernate.cfg.xml");
+    	SessionFactory factory = conf.buildSessionFactory();
+    	Session s = factory.openSession();
+    	Transaction tx=s.beginTransaction();
+    	Question question = s.get(Question.class, 10);
+    	System.out.println(question.getQuestionId());
+    	System.out.println(question.getQuestion());
+    	//System.out.println(question.getAnswer().size());
+    	tx.commit();
+
+	}
+
+}

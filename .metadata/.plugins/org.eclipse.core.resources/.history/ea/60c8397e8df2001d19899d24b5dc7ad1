@@ -1,0 +1,20 @@
+package com.jsp.mod1;
+
+public class Emp1 {
+	
+	private String eName;
+	private String eId;
+	private double eSal;
+	public Emp1(String eName, String eId, double eSal) {
+		super();
+		this.eName = eName;
+		this.eId = eId;
+		this.eSal = eSal;
+	}
+	@Override
+	public String toString() {
+		return "Emp1 [eName=" + eName + ", eId=" + eId + ", eSal=" + eSal + "]";
+	}
+	
+
+}

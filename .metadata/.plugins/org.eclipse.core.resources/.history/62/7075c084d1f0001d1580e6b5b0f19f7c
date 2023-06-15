@@ -1,0 +1,20 @@
+package com.Jsp.SecondProject.TestProject2;
+
+import org.hibernate.cfg.Configuration;
+
+import com.mysql.cj.Session;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        Configuration conf=new Configuration();
+        conf.configure("hibernate.cfg.xml");
+        Session factory=conf.buildSessionFactory();
+        Session session=factory.openSession();
+    }
+}

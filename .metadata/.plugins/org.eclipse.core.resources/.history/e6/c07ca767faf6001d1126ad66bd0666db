@@ -1,0 +1,29 @@
+package com.jsp.SpringJdbcCrud;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.jsp.SpringJdbc.Dao.StudentDao;
+import com.jsp.SpringJdbc.Dao.StudentDaoImpl;
+import com.jsp.SpringJdbc.Entity.Student;
+
+public class App 
+{
+	//update(query,v1,v2-----------vn)
+    public static void main(String[] args )
+    {
+        System.out.println( "Application Execution started");
+        ApplicationContext con=new ClassPathXmlApplicationContext("com/jsp/SpringJdbcCrud/JdbcSpring.xml");
+       StudentDao s=con.getBean("student1", StudentDaoImpl.class);//upcasting create the object of student impl 
+       //and store it in a superclass Student Dao
+       Student a=new Student();
+       a.setUsn("2sa16cs023");
+       a.setName("adya");
+       a.setCity("hubli");
+       
+       int result=s.insert(a);
+       System.out.println("Record inserted"+result);
+       System.out.println("Execution ended");
+    }
+}

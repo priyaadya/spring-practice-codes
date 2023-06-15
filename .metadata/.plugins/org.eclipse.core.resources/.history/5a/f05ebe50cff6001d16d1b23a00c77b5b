@@ -1,0 +1,14 @@
+package com.jsp.SpringJdbcCrud;
+
+
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Application Execution started");
+   
+        
+        System.out.println("Execution ended");
+    }
+}

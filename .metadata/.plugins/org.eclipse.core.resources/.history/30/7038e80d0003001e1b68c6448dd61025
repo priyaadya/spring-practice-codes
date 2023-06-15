@@ -1,0 +1,13 @@
+package SearchPageMvc;
+
+public class SearchController {
+	public String home() {
+		
+		System.out.println("going to home page");
+		return "home";
+		
+	}
+	
+	
+
+}

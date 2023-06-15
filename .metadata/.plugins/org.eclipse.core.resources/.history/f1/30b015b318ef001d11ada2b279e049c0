@@ -1,0 +1,29 @@
+package Jspiders.App;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+/*DAO class(data access object)*/
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	Student st=new Student();
+    	st.setUsn(10);
+    	st.setName("adya");
+    	st.setMarks(99);
+    	
+    	
+    	Configuration configuration = new Configuration();
+    	configuration.configure("hibernate.cfg.xml");
+    	SessionFactory buildSessionFactory = configuration.buildSessionFactory();
+    	//jdbc connection is established in above steps
+    	Session session = buildSessionFactory.openSession();
+    	Transaction tx = session.beginTransaction();//Commit is present in TCL
+        session.save(st);//saving
+        tx.commit(); //save the object permenently in the database
+        buildSessionFactory.close();
+    }
+}

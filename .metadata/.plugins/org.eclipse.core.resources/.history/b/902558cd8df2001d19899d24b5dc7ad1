@@ -1,0 +1,11 @@
+package com.jsp.mod1;
+
+public class Emp1 {
+	
+	private String eName;
+	private String eId;
+	private double eSal;
+	private Dept dept;
+	
+
+}

@@ -1,0 +1,54 @@
+package com.jsp.servletProject;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class LoginServlet extends HttpServlet {
+	
+	public void doGet(HttpServletRequest req,HttpServletResponse resp) throws IOException
+	{
+		String email=req.getParameter("em");
+		String password=req.getParameter("pa");
+		PrintWriter out=resp.getWriter();
+		
+
+		
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("driver class loaded and registerde");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&password=root");
+			System.out.println("connection stablished between java application and database");
+			PreparedStatement pstmt=con.prepareStatement("select * from jsp.table where email=? and password=?");
+			System.out.println("platform creatde");
+			pstmt.setString(1, email);
+			pstmt.setString(2, password);
+			ResultSet rs=pstmt.executeQuery();
+			if(rs.next())
+			{
+				out.println("<html><body bgcolor='green'><h1>Congrats Login Successfull.."+" "+rs.getString(2)+" "+"</h1></body></html>");
+			}
+			else
+			{
+				out.println("<html><body bgcolor='red'><h1>Ivalid user"+"</h1></body></html>");
+			}
+		
+		} catch (ClassNotFoundException | SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="grey">
+<h1>Welcome to Spring mvc Class</h1>
+<% 
+
+String name=(String)request.getAttribute("Name");
+int rollNo=(Integer)request.getAttribute("id");
+%>
+
+<h1>Name is::<%=name %></h1>
+<h1>Roll no::<%=rollNo %></h1>
+
+</body>
+</html>

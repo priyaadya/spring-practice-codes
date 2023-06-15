@@ -1,0 +1,16 @@
+package com.Jsp.SecondProject.TestProject2;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Answer {
+	@Id
+	@Column(name="answer_id")
+	private int answerId;
+	private String answer;
+	
+	@ManyToOne(fetch=FetchType.EAGER)
+	private Question question;
+
+
+}

@@ -1,0 +1,33 @@
+package com.jsp.SpringJdbc.Dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+
+import com.jsp.SpringJdbc.Entity.Student;
+
+public class StudentDaoImpl implements StudentDao {
+	
+	private JdbcTemplate jdbcTemplate;
+
+	/*
+	 * public int insert(Student student) {
+	 * 
+	 * String inquery="insert into  springjdbc.student values(?,?,?)"; int
+	 * result=jdbcTemplate.update(inquery,student.getUsn(),student.getName(),student
+	 * .getCity()); System.out.println("Record inserted......"+result); return
+	 * result; }
+	 */
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	public Student getStudent(String usn) {
+		String sql="select * springjdbc.student where usn=?";
+	Student student	= this.jdbcTemplate.queryForObject(sql, rowMapper, args);
+		return null;
+	}
+
+	
+}

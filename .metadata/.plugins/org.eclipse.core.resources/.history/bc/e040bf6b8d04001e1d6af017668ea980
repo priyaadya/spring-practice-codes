@@ -1,0 +1,103 @@
+package com.jpa.test;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Consumer;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.jpa.test.dao.UserRepository;
+import com.jpa.test.entities.User;
+
+@SpringBootApplication
+public class BootexampleApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(BootexampleApplication.class, args);
+		UserRepository userRepository = context.getBean(UserRepository.class);
+		/*
+		 * User user=new User(); user.setName("priya"); user.setCity("bng");
+		 * user.setStatus("i am developer"); User user1 = userRepository.save(user);
+		 * System.out.println(user1);
+		 */
+		
+		//create object of user
+//		User user1=new User();
+//		user1.setName("adya");
+//		user1.setCity("bgk");
+//		user1.setStatus("hii adya");
+//		
+//		User user2=new User();
+//		user2.setName("ankit");
+//		user2.setCity("bgk");
+//		user2.setStatus("hii ankit");
+//		
+//		List<User> users = List.of(user1,user2);
+//		
+		//saving multiple objects
+//		Iterable<User> result = userRepository.saveAll(users);
+//		
+//		result.forEach(user->{
+//			System.out.println(user);
+//		});
+//		/*
+//		 * for (User user : result) { System.out.println(user);
+//		 * 
+//		 * }
+//		 */
+//		System.out.println("done");
+//		
+//		update id of 12
+		
+//		Optional<User> optional = userRepository.findById(2);
+//		User user = optional.get();
+//		user.setName("punit");
+//		User result = userRepository.save(user);
+//		System.out.println(result);
+//		
+//	
+		
+		
+	//	how to get the data
+		//findByid(id)-return optional containing your data
+		Iterable<User> itr = userRepository.findAll();
+		//i can take itrator with the help of  itr
+		//iterator will give iterator object
+		//how much next elements present it willreturn true;
+//		Iterator<User> iterator = itr.iterator();
+//		while(iterator.hasNext())
+//		{
+//			User user=iterator.next();
+//			System.out.println(user);
+//		}
+		
+	//using lambda function	
+//	itr.forEach(user->{
+//		System.out.println(user);
+//	});
+		
+		
+		//deleting the elements
+		
+//		userRepository.deleteById(1);
+//		System.out.println("deleted");
+//		
+//		Iterable<User> allusers = userRepository.findAll();
+//		allusers.forEach(user->{
+//			System.out.println(user);
+//		});
+//		
+//		userRepository.deleteAll(allusers);
+//		System.out.println("deleted");
+		
+		
+		List<User> users = userRepository.findByName("pri");
+		users.forEach(e->System.out.println(e););
+	}
+
+}
+

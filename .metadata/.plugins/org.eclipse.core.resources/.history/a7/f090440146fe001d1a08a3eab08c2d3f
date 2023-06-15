@@ -1,0 +1,17 @@
+package com.jsp.Dao;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+import com.jsp.Entity.Student;
+
+public class StudentDao {
+	
+	private HibernateTemplate hibernatetemplate;
+	
+	public int insert(Student student) {
+		this.hibernatetemplate.save(student);
+		return 0;
+		
+	}
+
+}

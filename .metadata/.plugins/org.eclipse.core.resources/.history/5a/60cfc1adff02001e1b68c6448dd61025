@@ -1,0 +1,5 @@
+package SearchPageMvc;
+
+public class SearchController {
+
+}

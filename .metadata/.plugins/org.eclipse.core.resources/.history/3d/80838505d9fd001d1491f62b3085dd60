@@ -1,0 +1,23 @@
+package com.jsp.servletProject;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class LoginServlet extends HttpServlet {
+	
+	public void doget(HttpServletRequest req,HttpServletResponse resp) throws IOException
+	{
+		String email=req.getParameter("em");
+		String password=req.getParameter("pa");
+		PrintWriter out=resp.getWriter();
+		out.println("<html><body><h1>Congrats Login Successfull.."+" "+email+" "+"</h1></body></html>");
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,28 @@
+<%@page import="java.util.List" %>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="yellow" text-align="center">
+<h1>Hello Dinga and dingis</h1>
+<h2>Welcome to springmvc clsss</h2>
+<%
+	int x=10;
+String a="ABCD";
+List<String> a=new ArrayList<String>();
+a.add("java");
+a.add("sql");
+a.add("python");
+a.add("spring");
+
+%>
+<h1>The value of x is<%=x %></h1>
+<h1>Char at second position is:<%=a.charAt(1) %></h1>
+
+</body>
+</html>

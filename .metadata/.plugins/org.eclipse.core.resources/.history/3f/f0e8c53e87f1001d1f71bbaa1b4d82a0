@@ -1,0 +1,19 @@
+package Hql;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class sqlExample {
+
+	public static void main(String[] args) {
+		Configuration conf=new Configuration();
+		conf.configure("hibernate.cfg.xml");
+		SessionFactory factory=conf.buildSessionFactory();
+		Session session = factory.openSession();
+		String q1="select * from Student";
+		
+		
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.jsp.ServletProject;
+
+public class MyServlet extends HttpServlet {
+	
+	
+
+}

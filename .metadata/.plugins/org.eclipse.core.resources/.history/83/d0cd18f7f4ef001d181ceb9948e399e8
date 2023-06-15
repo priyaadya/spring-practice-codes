@@ -1,0 +1,46 @@
+package com.map;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class MapDemo {
+
+	public static void main(String[] args) {
+		Configuration conf=new  Configuration();
+    	conf.configure("hibernate.cfg.xml");
+    	SessionFactory factory = conf.buildSessionFactory();
+    	
+    	
+    	Question q1=new Question();
+    	q1.setQuestionId(123);
+    	q1.setQuestion("what is java?");
+    	
+    	
+    	Question q2=new Question();
+    	q1.setQuestionId(123);
+    	q1.setQuestion("what is collection?");
+    	
+    	Answer answer=new Answer();
+    	answer.setAnswerId(321);
+    	answer.setAnswer("Java is prg lang");
+    	q1.setAnswer(answer);
+    	
+    	Answer answer1=new Answer();
+    	answer.setAnswerId(321);
+    	answer.setAnswer("is a framework");
+    	q2.setAnswer(answer1);
+    	
+    	Session session = factory.openSession();
+    	Transaction tx=session.beginTransaction();
+    	session.save(q1);
+    	session.save(q2);
+    	tx.commit();
+    	session.close();
+    	System.out.println("Done:");
+    	
+
+	}
+
+}

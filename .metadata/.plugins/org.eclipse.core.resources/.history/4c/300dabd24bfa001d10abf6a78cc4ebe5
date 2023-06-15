@@ -1,0 +1,12 @@
+package com.spring.orm;
+
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	LocalSessionFactoryBean
+        System.out.println( "Hello World!" );
+    }
+}

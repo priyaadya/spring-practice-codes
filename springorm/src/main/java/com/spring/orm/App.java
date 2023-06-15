@@ -1,0 +1,70 @@
+package com.spring.orm;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+
+import com.spring.orm.Dao.StudentDao;
+import com.spring.orm.entities.Student;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+    	StudentDao studentdao=context.getBean("studentDao", StudentDao.class);
+    	
+    	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+    	boolean go=true;
+    	while(go) {
+    		System.out.println("press 1 for add new Student");
+    		System.out.println("press 2 for display all students");
+    		System.out.println("press  3 for disply single student");
+    		System.out.println("press 4 for delete student");
+    		System.out.println("press 5 for update student");
+    		System.out.println("press 6 for exit student");
+    		
+    		try {
+    			int input=Integer.parseInt(br.readLine());
+    			switch(input)
+    			{
+    			case 1://add new student
+    				
+    				break;
+    			case 2://display all student
+    				break;
+    			case 3://display single student data
+    				break;
+    			case 4://delete student
+    				break;
+    			case 5://update the student
+    				break;
+    			case 6://exit
+    				go=false;
+    				break ;
+    		
+    				
+    				
+    				
+    			
+    			}
+			} 
+    		catch (Exception e) {
+    			System.out.println("invalid input try with another one");
+    			System.out.println(e.getMessage());
+				
+			}
+    	}
+    	System.out.println("Thank you for usinf my application");
+    	System.out.println("see you soon");
+    	
+		/*
+		 * Student student=new Student(2324,"priyanka","bagalkot"); int
+		 * r=studentdao.insert(student); System.out.println("done:"+r);
+		 */
+    
+    }
+}

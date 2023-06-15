@@ -1,0 +1,23 @@
+package com.jsp.SpringJdbcCrud;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class App 
+{
+	//update(query,v1,v2-----------vn)
+    public static void main( String[] args )
+    {
+        System.out.println( "Application Execution started");
+        ApplicationContext con=new ClassPathXmlApplicationContext("com/jsp/SpringJdbcCrud/JdbcSpring.xml");
+       JdbcTemplate a=con.getBean("jdbcTemplate", JdbcTemplate.class);
+       
+       String query="insert into student values(?,?,?)";
+       int b=a.update(query,"2SA16CS027","Priya","bangalore");
+       System.out.println(b);
+   
+       
+        System.out.println("Execution ended");
+    }
+}

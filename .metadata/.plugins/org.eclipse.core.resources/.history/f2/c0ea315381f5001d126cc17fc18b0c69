@@ -1,0 +1,16 @@
+package com.jsp.demo.mod1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Client {
+
+	public static void main(String[] args) {
+		System.out.println("Execution started");
+		
+		ApplicationContext context=new ClassPathXmlApplicationContext("/Test1/src/main/java/Config1.xml");
+		System.out.println("Execution ended");
+		
+	}
+
+}

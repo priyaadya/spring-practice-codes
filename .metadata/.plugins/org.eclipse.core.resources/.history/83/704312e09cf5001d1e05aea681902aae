@@ -1,0 +1,19 @@
+package com.jsp.mod1;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("bean1")
+public class SpelExp {
+	
+	@Value("#{99+63)")
+	private int x;
+	
+	@Value("#{88>99?8.5:9.5}")
+	private double y;
+	
+	
+	
+	
+
+}

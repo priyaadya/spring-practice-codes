@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@page is %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Congrats All your data has been recorded...!! it with us</h1>
+
+<%
+String UserName=(String)request.getAttribute("un");
+String Email=(String)request.getAttribute("um");
+String Password=(String)request.getAttribute("up");
+
+%>
+<h1>Uname is:<%=UserName %></h1>
+<h1>umail is:<%=Email %></h1>
+<h1>Password is:<%=Password %></h1>
+
+
+
+</body>
+</html>

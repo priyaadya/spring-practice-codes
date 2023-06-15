@@ -1,0 +1,13 @@
+package com.devTool.devTool;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class TestController {
+	
+	public String test() {
+		return "this is just testing:"+(a+b);
+		
+	}
+
+}

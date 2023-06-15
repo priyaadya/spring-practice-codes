@@ -1,0 +1,26 @@
+package com.mvc.ViewToCotroller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class SigUp {
+	
+	//process Controller
+	
+	@RequestMapping("/contact")
+	public String Contact() {
+		return "SignUp";
+		
+	}
+	
+	//handler controler which will specify the final destiation of SignUp page
+	@RequestMapping(path="/process",method=RequestMethod.POST)
+	public String HandleFormData() {
+		return "";
+		
+	}
+	
+
+}

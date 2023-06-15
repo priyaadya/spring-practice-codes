@@ -1,0 +1,14 @@
+package com.SpringWithoutXml;
+
+import org.springframework.stereotype.Component;
+
+@Component("firstPizza")
+public class Pizza {
+		void deliver()
+		{
+			System.out.println("Deliver my pizza fast!! i am very hungry");
+			
+		}
+	
+
+}

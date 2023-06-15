@@ -1,0 +1,10 @@
+package Hql;
+
+
+public class SecondCache {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

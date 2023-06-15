@@ -1,0 +1,5 @@
+package com.RestApi.RestApi.entities;
+
+public class Book {
+
+}

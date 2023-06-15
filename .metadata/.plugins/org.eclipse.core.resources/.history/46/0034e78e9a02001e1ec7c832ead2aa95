@@ -1,0 +1,10 @@
+package mvcspring;
+
+public class ContactController {
+	
+	public String showForm() {
+		return "contact";
+		
+	}
+
+}

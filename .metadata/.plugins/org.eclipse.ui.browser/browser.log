@@ -1,0 +1,22 @@
+
+May 31, 2023 13:06:58.132 NEW SESSION
+May 31, 2023 13:06:58.132 [1952:6920:0531/130658.091:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+
+Jun 03, 2023 22:56:26.916 NEW SESSION
+Jun 03, 2023 22:56:26.917 [6328:2704:0603/225626.913:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Jun 03, 2023 22:56:28.626 [6328:5280:0603/225628.625:ERROR:device_event_log_impl.cc(222)] [22:56:28.625] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Jun 03, 2023 22:56:28.950 [6328:2704:0603/225628.950:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jun 03, 2023 23:25:21.916 [6328:2704:0603/232521.915:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Jun 03, 2023 23:25:23.969 [6328:2704:0603/232523.968:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+Jun 04, 2023 09:14:10.477 NEW SESSION
+Jun 04, 2023 09:14:10.478 [260:4212:0604/091410.470:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jun 04, 2023 09:14:37.920 [260:4212:0604/091437.920:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jun 04, 2023 09:41:58.72 [260:4212:0604/094158.072:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jun 04, 2023 09:42:24.186 [260:4212:0604/094224.184:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jun 04, 2023 09:43:21.148 [260:4212:0604/094321.147:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jun 04, 2023 09:45:18.950 [260:4212:0604/094518.948:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Jun 04, 2023 12:52:39.304 [260:4212:0604/125239.300:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+
+Jun 04, 2023 22:46:00.208 NEW SESSION
+Jun 04, 2023 22:46:00.209 [8340:8992:0604/224600.107:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106

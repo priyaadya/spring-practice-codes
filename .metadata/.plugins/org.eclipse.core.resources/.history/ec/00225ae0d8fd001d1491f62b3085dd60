@@ -1,0 +1,17 @@
+package com.jsp.servletProject;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class LoginServlet extends HttpServlet {
+	
+	public void doget(HttpServletRequest req,HttpServletResponse resp)
+	{
+		String email=req.getParameter("em");
+		String password=req.getParameter("pa");
+		
+		
+	}
+
+}

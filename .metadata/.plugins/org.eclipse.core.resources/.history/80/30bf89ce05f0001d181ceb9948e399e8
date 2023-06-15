@@ -1,0 +1,8 @@
+package com.map;
+
+public class Project {
+	
+	private int pid;
+	private String projectName;
+
+}

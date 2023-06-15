@@ -1,0 +1,10 @@
+import java.applet.AppletContext;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	AppletContext context = new 
+       
+    }
+}
